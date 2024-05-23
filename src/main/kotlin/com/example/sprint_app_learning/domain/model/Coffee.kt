@@ -4,9 +4,9 @@ import jakarta.persistence.*
 
 @Entity
 @Table(name = "coffee")
-class Coffee(
+open class Coffee(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long = 0,
-    var name: String
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    open var id: Long? = 0,
+    open var name: String? = null
 )
